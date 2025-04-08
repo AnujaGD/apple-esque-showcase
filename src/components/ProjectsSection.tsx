@@ -45,10 +45,10 @@ const projects: Project[] = [
 const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="snap-mandatory snap-y">
-      <div className="py-16">
-        <div className="text-center mb-8">
+      <div className="py-10">
+        <div className="text-center mb-10">
           <h2 className="heading-lg mb-4 text-gradient-pink">Featured Projects</h2>
-          <p className="text-white/80 max-w-2xl mx-auto">
+          <p className="text-white/80 max-w-3xl mx-auto text-lg">
             A showcase of my recent development work, spanning web and mobile applications.
           </p>
         </div>
