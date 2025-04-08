@@ -35,6 +35,10 @@
     --border: 225 14% 20%;
     --input: 225 14% 20%;
     --ring: 212.7 26.8% 83.9%;
+    
+    /* Custom colors */
+    --baby-pink: 350 100% 88%;
+    --light-purple: 270 76% 85%;
 
     --radius: 0.5rem;
   }
@@ -80,6 +84,18 @@
   .apple-button-secondary {
     @apply px-6 py-3 rounded-full bg-secondary text-secondary-foreground font-semibold text-sm transition-colors hover:bg-secondary/80;
   }
+  
+  .text-gradient-pink {
+    @apply bg-gradient-to-r from-white via-[#FFDEE2] to-[#D6BCFA] bg-clip-text text-transparent;
+  }
+  
+  .text-baby-pink {
+    color: hsl(var(--baby-pink));
+  }
+  
+  .text-light-purple {
+    color: hsl(var(--light-purple));
+  }
 }
 
 @layer utilities {
@@ -92,6 +108,7 @@
   }
 }
 
+/* Animation keyframes */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -100,6 +117,21 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes bubbleEffect {
+  0% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
 
@@ -117,24 +149,43 @@
   opacity: 0;
 }
 
+.project-container {
+  @apply w-full;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.project-wrapper {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.project-slide {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+.project-bubble {
+  animation: bubbleEffect 6s infinite ease-in-out;
+}
+
 .project-slide-enter {
   opacity: 0;
-  transform: scale(0.9);
+  transform: translateY(40px);
 }
 
 .project-slide-enter-active {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
   transition: opacity 800ms, transform 800ms;
 }
 
 .project-slide-exit {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
 }
 
 .project-slide-exit-active {
   opacity: 0;
-  transform: scale(0.9);
+  transform: translateY(-40px);
   transition: opacity 800ms, transform 800ms;
 }

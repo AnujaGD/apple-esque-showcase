@@ -1,7 +1,6 @@
 
-import React, { useState } from "react";
+import React from "react";
 import ProjectCard from "./ProjectCard";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export interface Project {
   id: string;
@@ -45,28 +44,22 @@ const projects: Project[] = [
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="min-h-screen">
+    <section id="projects" className="snap-mandatory snap-y">
       <div className="py-16">
         <div className="text-center mb-8">
-          <h2 className="heading-lg mb-4 text-foreground">Featured Projects</h2>
-          <p className="text-foreground/70 max-w-2xl mx-auto">
+          <h2 className="heading-lg mb-4 text-gradient-pink">Featured Projects</h2>
+          <p className="text-white/80 max-w-2xl mx-auto">
             A showcase of my recent development work, spanning web and mobile applications.
           </p>
         </div>
 
-        <Carousel className="w-full">
-          <CarouselContent>
-            {projects.map((project) => (
-              <CarouselItem key={project.id}>
-                <ProjectCard project={project} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="container mx-auto px-4">
-            <CarouselPrevious className="left-4 sm:left-8" />
-            <CarouselNext className="right-4 sm:right-8" />
-          </div>
-        </Carousel>
+        <div className="project-container">
+          {projects.map((project) => (
+            <div key={project.id} className="project-wrapper">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -45,11 +45,23 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <Hero />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
-      <Footer />
+      <div className="snap-y snap-mandatory h-screen overflow-y-auto">
+        <div className="snap-start">
+          <Hero />
+        </div>
+        <div className="snap-start">
+          <ProjectsSection />
+        </div>
+        <div className="snap-start">
+          <SkillsSection />
+        </div>
+        <div className="snap-start">
+          <ContactSection />
+        </div>
+        <div className="snap-start">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };
