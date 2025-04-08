@@ -8,12 +8,12 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center px-4 bg-gradient-to-b from-gray-50 to-white">
+    <section className="h-screen flex items-center justify-center px-4 bg-gradient-to-b from-background to-background/95">
       <div className="text-center max-w-3xl mx-auto space-y-6">
-        <h1 className="heading-xl animate-fade-in">
+        <h1 className="heading-xl animate-fade-in text-gradient">
           Building digital experiences with precision.
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in-delay-1">
+        <p className="text-xl text-foreground/70 max-w-2xl mx-auto animate-fade-in-delay-1">
           Full-stack developer focused on creating elegant, performant, and user-centric applications.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-in-delay-2">

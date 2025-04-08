@@ -8,9 +8,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index: React.FC = () => {
-  // Adding some smooth scrolling behavior like Apple's website
+  // Adding some smooth scrolling behavior
   useEffect(() => {
-    // Handler for scroll animations can go here
+    // Handler for scroll animations
     const sections = document.querySelectorAll('section');
     
     const observerOptions = {
@@ -43,7 +43,7 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
       <ProjectsSection />

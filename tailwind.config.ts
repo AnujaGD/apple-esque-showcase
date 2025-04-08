@@ -99,13 +99,53 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
+				slideIn: {
+					from: {
+						opacity: '0',
+						transform: 'translateX(30px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				scaleIn: {
+					from: {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fadeIn 0.8s ease-out forwards',
-			}
+				'slide-in': 'slideIn 0.6s ease-out forwards',
+				'scale-in': 'scaleIn 0.6s ease-out forwards',
+			},
+			textShadow: {
+				sm: '0 1px 2px var(--tw-shadow-color)',
+				DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+				lg: '0 8px 16px var(--tw-shadow-color)',
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		function({ addUtilities }) {
+			const newUtilities = {
+				'.text-gradient': {
+					'background-clip': 'text',
+					'-webkit-background-clip': 'text',
+					'color': 'transparent',
+					'background-image': 'linear-gradient(to right bottom, hsl(var(--foreground)), hsl(var(--foreground)/0.7))'
+				},
+			}
+			addUtilities(newUtilities)
+		}
+	],
 } satisfies Config;
