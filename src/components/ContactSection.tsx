@@ -34,11 +34,11 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-24 bg-background">
       <div className="container-section">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4">Get in Touch</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="heading-lg mb-4 text-gradient-pink">Get in Touch</h2>
+          <p className="text-white/80 max-w-2xl mx-auto">
             Have a project in mind or want to discuss potential collaborations? Drop me a message.
           </p>
         </div>
@@ -53,9 +53,9 @@ const ContactSection: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="pl-10 py-6"
+                className="pl-10 py-6 bg-card/50 border-white/10 text-white placeholder:text-white/50"
               />
-              <User className="absolute left-3 top-3 text-gray-400" size={16} />
+              <User className="absolute left-3 top-3 text-light-purple" size={16} />
             </div>
             
             <div className="relative">
@@ -67,9 +67,9 @@ const ContactSection: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="pl-10 py-6"
+                className="pl-10 py-6 bg-card/50 border-white/10 text-white placeholder:text-white/50"
               />
-              <Mail className="absolute left-3 top-3 text-gray-400" size={16} />
+              <Mail className="absolute left-3 top-3 text-light-purple" size={16} />
             </div>
 
             <div className="relative">
@@ -80,14 +80,14 @@ const ContactSection: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="pl-10 min-h-[150px] resize-none"
+                className="pl-10 min-h-[150px] resize-none bg-card/50 border-white/10 text-white placeholder:text-white/50"
               />
-              <MessageSquare className="absolute left-3 top-3 text-gray-400" size={16} />
+              <MessageSquare className="absolute left-3 top-3 text-light-purple" size={16} />
             </div>
 
             <Button 
               type="submit" 
-              className="apple-button w-full"
+              className="apple-button w-full bg-gradient-to-r from-pink-500/80 to-purple-600/80 hover:from-pink-500/90 hover:to-purple-600/90 text-white"
             >
               Send Message
             </Button>

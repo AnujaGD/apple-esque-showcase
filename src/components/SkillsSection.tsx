@@ -44,29 +44,29 @@ const skills: Skill[] = [
 
 const SkillsSection: React.FC = () => {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="py-24 bg-background">
       <div className="container-section">
         <div className="text-center mb-16">
-          <h2 className="heading-lg mb-4">Technical Skills</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="heading-lg mb-4 text-gradient-pink">Technical Skills</h2>
+          <p className="text-white/80 max-w-2xl mx-auto">
             My expertise spans across various technologies and tools in software development.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill) => (
-            <div key={skill.name} className="apple-card p-6">
+            <div key={skill.name} className="glass-effect p-6 hover:bg-white/10 transition-colors duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-gray-100 p-3 rounded-xl">
-                  <skill.icon size={24} className="text-gray-800" />
+                <div className="bg-purple-900/40 p-3 rounded-xl">
+                  <skill.icon size={24} className="text-light-purple" />
                 </div>
-                <h3 className="font-semibold text-xl">{skill.name}</h3>
+                <h3 className="font-semibold text-xl text-white">{skill.name}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="px-3 py-1 bg-gray-100 text-gray-800 text-sm font-medium rounded-full"
+                    className="px-3 py-1 bg-purple-900/40 text-light-purple text-sm font-medium rounded-full"
                   >
                     {item}
                   </span>
