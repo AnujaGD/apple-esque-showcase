@@ -15,12 +15,12 @@ export interface Project {
 const projects: Project[] = [
   {
     id: "project1",
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce solution with seamless checkout experience and responsive design. Built with a focus on user experience and performance optimization.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&w=800&q=80",
-    demoUrl: "https://demo.example.com/ecommerce",
-    githubUrl: "https://github.com/yourusername/ecommerce",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe API"]
+    title: "Code Blossom Quest",
+    description: "Practice coding like a game — earn XP, build streaks, and conquer algorithms daily.",
+    image: "https://unsplash.com/photos/shallow-focus-photography-of-computer-codes-BfrQnKBulYQ",
+    demoUrl: "https://code-blossom-quest.vercel.app/",
+    githubUrl: "https://github.com/AnujaGD/code-blossom-quest",
+    technologies: ["React", "Node.js", "Vite", "Supabase"]
   },
   {
     id: "project2",
