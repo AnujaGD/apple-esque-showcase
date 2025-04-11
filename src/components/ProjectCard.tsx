@@ -45,14 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
             >
               Live Demo <ArrowUpRight size={20} />
             </a>
-            <a 
-              href={project.githubUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="apple-button-secondary flex items-center gap-2 text-base px-8 py-4"
-            >
-              View Code <Github size={20} />
-            </a>
+            
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ export interface Project {
   description: string;
   image: string;
   demoUrl: string;
-  githubUrl: string;
+  githubUrl: string
   technologies: string[];
 }
 
@@ -17,17 +17,17 @@ const projects: Project[] = [
     id: "project1",
     title: "Code Blossom Quest",
     description: "Practice coding like a game — earn XP, build streaks, and conquer algorithms daily.",
-    image: "https://unsplash.com/photos/shallow-focus-photography-of-computer-codes-BfrQnKBulYQ",
+    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     demoUrl: "https://code-blossom-quest.vercel.app/",
     githubUrl: "https://github.com/AnujaGD/code-blossom-quest",
     technologies: ["React", "Node.js", "Vite", "Supabase"]
   },
   {
     id: "project2",
-    title: "Finance Dashboard",
-    description: "Interactive dashboard for tracking personal finances with data visualization. Features real-time updates, custom reports, and budgeting tools.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&w=800&q=80",
-    demoUrl: "https://demo.example.com/dashboard",
+    title: "Splitzy",
+    description: "Because doing the math should never ruin the meal — real-time bill splitting, simplified.",
+    image: "https://plus.unsplash.com/premium_photo-1677265809141-2dae60173b27?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    demoUrl: "https://split-j88giwikw-anujagds-projects.vercel.app/",
     githubUrl: "https://github.com/yourusername/finance-dashboard",
     technologies: ["TypeScript", "React", "Chart.js", "Firebase"]
   },
