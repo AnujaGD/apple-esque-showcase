@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           <a href="#contact" className="apple-button-secondary">
             Get in Touch
           </a>
-          <a href="resume.pdf" target="_blank" className="apple-button-secondary" >
+          <a href="resume.pdf"  className="apple-button-secondary" >
             Download Resume
           </a>
         </div>
